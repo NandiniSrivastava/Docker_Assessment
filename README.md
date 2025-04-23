@@ -41,6 +41,8 @@ This ensures communication between the PostgreSQL and Streamlit containers.
 ```bash
 docker network create --driver bridge my_custom_network
 ```
+![image](https://github.com/user-attachments/assets/ee07bcf0-7280-4326-bf8e-e3b976f0d3bf)
+
 
 ### **2️⃣ Run PostgreSQL Container**
 ```bash
@@ -53,6 +55,8 @@ docker run -d \
   -p 5432:5432 \
   postgres
 ```
+![image](https://github.com/user-attachments/assets/98ed5fd4-55a9-4d84-bbec-4050f163f3b3)
+
 This starts a PostgreSQL container with:
 - **Username:** `admin`
 - **Password:** `adminpassword`
@@ -79,6 +83,8 @@ INSERT INTO users (name, email) VALUES
 
 SELECT * FROM users;
 ```
+![image](https://github.com/user-attachments/assets/225d1114-d02a-4dd5-9881-fef2c575dd92)
+
 #### Exit PostgreSQL
 Type `\q` and press Enter.
 
@@ -87,6 +93,8 @@ Type `\q` and press Enter.
 ```bash
 docker build -t my_streamlit_app .
 ```
+![image](https://github.com/user-attachments/assets/46e3932f-5982-45d2-8912-734d796940c7)
+
 #### Run the Container
 ```bash
 docker run -d \
@@ -95,6 +103,7 @@ docker run -d \
   -p 8501:8501 \
   my_streamlit_app
 ```
+![image](https://github.com/user-attachments/assets/a9f302f6-2ce8-41d5-812d-d22f7c9a6052)
 
 ### **5️⃣ Test the Setup**
 Open a browser and visit:
@@ -104,6 +113,8 @@ http://localhost:8501
 You should see user data fetched from the PostgreSQL database.
 
 ---
+![image](https://github.com/user-attachments/assets/2b8aa6ad-bf27-4b16-999f-193ebed3ab63)
+
 
 ## 📜 Understanding the Code
 ### **🔹 `stream.py` – The Core Application**
